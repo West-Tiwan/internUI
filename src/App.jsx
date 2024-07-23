@@ -1,13 +1,12 @@
+import React, {useState} from 'react';
 import styles from './App.module.scss'
-import React from 'react';
 import Sidebar from "./Components/Sidebar/Sidebar.jsx";
 import UpArrow from "./assets/arrow-square-right.svg";
 import arrowSquareRight from "./assets/arrow-square-right.svg";
 import TextArea from "./Components/TextArea/TextArea.jsx";
-import HoverWindow from './Components/HoverWindow/HoverWindow.jsx';
 
 const App = () => {
-  const [isSidebarVisible, setIsSidebarVisible] = React.useState(true);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   return (
       <>
         <div className={styles.toggler} onClick={() => setIsSidebarVisible(!isSidebarVisible)}>
@@ -15,10 +14,10 @@ const App = () => {
         </div>
         <div className={styles.title} onClick={() => setIsSidebarVisible(!isSidebarVisible)}>
           <p>Answer Analysis</p>
-          <img src={arrowSquareRight}/>
+          {isSidebarVisible ? <img src={arrowSquareRight} onClick={() => setIsSidebarVisible(!isSidebarVisible)}/> : <img src={arrowSquareRight} className={styles.DownArrow} onClick={() => setIsSidebarVisible(!isSidebarVisible)}/>}
         </div>
         <link href="https://fonts.cdnfonts.com/css/euclid-circular-b" rel="stylesheet"></link>
-        <div className={`${styles.outer} ${!isSidebarVisible ? `${styles.hidden}` : ''}`}>
+        <div className={`${styles.outer} ${isSidebarVisible ? `${styles.hidden}` : `${styles.notHidden}`}`}>
           <div className={styles.queAns}>
             <div className={styles.heading}><p>Question</p></div>
             <div className={styles.text}>

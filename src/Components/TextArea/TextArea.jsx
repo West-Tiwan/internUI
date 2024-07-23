@@ -52,7 +52,7 @@ const TextArea = () => {
         <>
             <div className={styles.bar}>
                 <div className={styles.heading}><p>Answered by you</p></div>
-                <div className={styles.link}><p>{wordCount} words {letterCount} letters {paragraphCount} paragraphs</p></div>
+                <div className={styles.link}><p>{wordCount} words</p><p>{letterCount} letters</p><p>{paragraphCount} paragraphs</p></div>
             </div>
             <div className={styles.textarea}>
                 <div className={styles.text}>
