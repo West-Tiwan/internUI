@@ -3,6 +3,8 @@ import React from 'react';
 import Sidebar from "./Components/Sidebar/Sidebar.jsx";
 import UpArrow from "./assets/arrow-square-right.svg";
 import arrowSquareRight from "./assets/arrow-square-right.svg";
+import TextArea from "./Components/TextArea/TextArea.jsx";
+import HoverWindow from './Components/HoverWindow/HoverWindow.jsx';
 
 const App = () => {
   const [isSidebarVisible, setIsSidebarVisible] = React.useState(true);
@@ -24,54 +26,7 @@ const App = () => {
                 far
                 corners of the universe?</p>
             </div>
-            <div className={styles.bar}>
-              <div className={styles.heading}><p>Answered by you</p></div>
-              <div className={styles.link}><p>1075 word 1075 letters 4 paragraphs</p></div>
-            </div>
-            <div className={styles.textarea}>
-              <div className={styles.text}>
-                <p>In the year 2137, humanity had made incredible strides in space exploration. With advanced technology
-                  and the tenacity of pioneers like Captain Elara Voss, humans had reached the far corners of the
-                  universe. Elara was a seasoned astronaut, known for her courage and <span
-                      className={styles.red}>determination</span> in the face of unknown dangers. She had led countless
-                  missions, but none compared to the journey she was about to embark on.</p>
-              </div>
-              <div className={styles.text}>
-                <p>Eos was a mysterious exoplanet that had recently been discovered. Its vibrant nebulae and colossal
-                  red
-                  moon had captured the <span className={styles.yellow}>attention of scientists</span> and adventurers
-                  alike. Many were drawn to its beauty, while others were intrigued by its potential resources. But
-                  Clara&apos;s mission was different. She was sent to explore and document the planet&apos;s <span
-                      className={styles.blue}>secrets, with the hope of finding a new home for humanity.</span> Eos was
-                  a
-                  mysterious exoplanet that had recently been discovered. Its vibrant nebulae and colossal red moon had
-                  captured the attention of scientists and adventurers alike. Many were drawn to its beauty, while
-                  others
-                  were intrigued by its potential resources. But Elara&apos;s mission was different. She was sent to
-                  explore and document the planet&apos;s secrets, with the hope of finding a new home for humanity.</p>
-              </div>
-              <div className={styles.text}>
-                <p>In the year 2137, humanity had made incredible strides in space exploration. With advanced technology
-                  and the tenacity of pioneers like Captain Elara Voss, humans had reached the far corners of the
-                  universe. Elara was a seasoned astronaut, known for her courage and <span
-                      className={styles.red}>determination</span> in the face of unknown dangers. She had led countless
-                  missions, but none compared to the journey she was about to embark on.</p>
-              </div>
-              <div className={styles.text}>
-                <p>Eos was a mysterious exoplanet that had recently been discovered. Its vibrant nebulae and colossal
-                  red
-                  moon had captured the attention of scientists and adventurers alike. Many were drawn to its beauty,
-                  while others were intrigued by its potential resources. But Elara&apos;s mission was different. She
-                  was
-                  sent to explore and document the planet&apos;s <span className={styles.blue}>secrets, with the hope of finding a new home for humanity.</span> Eos
-                  was a mysterious exoplanet that had recently been discovered. Its vibrant nebulae and colossal red
-                  moon
-                  had captured the attention of scientists and adventurers alike. Many were drawn to its beauty, while
-                  others were intrigued by its potential resources. But Elara&apos;s mission was different. She was sent
-                  to explore and document the planet&apos;s secrets, with the hope of finding a new home for humanity.
-                </p>
-              </div>
-            </div>
+            <TextArea/>
           </div>
         </div>
         <Sidebar isSidebarVisible={isSidebarVisible} setIsSidebarVisible={setIsSidebarVisible}/>

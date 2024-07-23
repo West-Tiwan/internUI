@@ -29,78 +29,9 @@
         transition: transform 0.3s ease-in-out;
 
         @media (max-width: 1000px) {
+            width: 90%;
             transform: translateX(0);
             padding: 10px;
-        }
-
-        .bar{
-            margin: 20px 0;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            
-            .link{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                color: var(--gradient-dark_purple, #5B6BE1);
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-        }
-
-        .textarea{
-            border-radius: 12px;
-            border: 0.5px solid rgba(197, 197, 197, 0.50);
-            display: flex;
-            padding: 20px;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            flex: 1 0 0;
-            align-self: stretch;
-
-            .text{
-                color: var(--color-gray-80, #5F5F5F);
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 40px;
-                
-                .red{
-                    display: inline;
-                    color: var(--Main-Red, #FF595E);
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 40px;
-                    text-decoration-line: underline;
-                }
-
-                .yellow{
-                    display: inline;
-                    color: var(--secondry-13, #FDB338);
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 40px;
-                    text-decoration-line: underline;
-                }
-
-                .blue{
-                    display: inline;
-                    color: var(--flowkit-Purple, #7B61FF);
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 40px;
-                    text-decoration-line: underline;
-                }
-            }
         }
     }
 
@@ -301,7 +232,7 @@
     position: absolute;
     top: 15px;
     right: 19px;
-    background-color: #5F5F5F;
+    background-color: #5B6BE1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -317,7 +248,7 @@
 
 .title{
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     bottom: 0;
     background: #5B6BE1;
     display: flex;
@@ -335,7 +266,7 @@
 
     img{
         cursor: pointer;
-        rotate: 270deg;
+        rotate: 90deg;
     }
 
     p,img{
