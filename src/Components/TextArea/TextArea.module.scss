@@ -30,17 +30,12 @@
   flex: 1 0 0;
   align-self: stretch;
 
-  textarea{
+  input{
     width: 100%;
     height: 100vh;
     border: none;
     outline: none;
     resize: none;
-    color: var(--color-gray-80, #5F5F5F);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px;
 
     &::-webkit-scrollbar {
       scrollbar-width: thin;
@@ -49,6 +44,35 @@
   }
 
   .text{
+    display: flex;
+    flex-direction: column;
+    color: #5F5F5F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+
+    .textGroup{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+
+    .hov{
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    .hoverInfo {
+      margin-top: 10px; /* Adjust as needed */
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      position: absolute;
+      z-index: 10;
+    }
 
     .red{
       display: inline;
