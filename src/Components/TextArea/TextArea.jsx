@@ -42,14 +42,14 @@ const TextArea = () => {
     }
 
     useEffect(() => {
-        const countWords = (finalText) => finalText.split(/\s+/).filter(Boolean).length;
-        const countLetters = (finalText) => finalText.replace(/\s/g, '').length;
-        const countParagraphs = (finalText) => finalText.split(/\n\n|\r\n\r\n/).filter(Boolean).length;
+        const countWords = (textArray) => textArray.join(' ').split(/\s+/).filter(Boolean).length;
+        const countLetters = (textArray) => textArray.join(' ').replace(/\s/g, '').length;
+        const countParagraphs = (textArray) => textArray.join('\n').split(/\n\n|\r\n\r\n/).filter(Boolean).length;
 
-        setWordCount(countWords(finalText));
-        setLetterCount(countLetters(finalText));
-        setParagraphCount(countParagraphs(finalText));
-    }, [text]);
+        setWordCount(countWords([...text, ...corrections]));
+        setLetterCount(countLetters([...text, ...corrections]));
+        setParagraphCount(countParagraphs([...text, ...corrections]));
+    }, [text, corrections]);
 
     useEffect(() => {
         const container = containerRef.current;
@@ -68,9 +68,7 @@ const TextArea = () => {
 
     const handleTextChange = (index, correctionText) => {
         const newCorrections = [...corrections];
-        console.log(newCorrections);
         newCorrections[index] = correctionText[index];
-        console.log(newCorrections);
         setCorrections(newCorrections);
         setVisible(false);
         setShown("none");
