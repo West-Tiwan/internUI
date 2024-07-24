@@ -17,7 +17,7 @@ const TextArea = () => {
         ,
         `. Eos was a mysterious exoplanet that had recently been discovered. Its vibrant nebulae and colossal red moon had captured the attention of scientists and adventurers alike. Many were drawn to its beauty, while others were intrigued by its potential resources. But Elara\'s mission was different. She was sent to explore and document the planet\'s secrets, with the hope of finding a new home for humanity.\n\n`])
 
-    const [corrections, setCorrections] = useState(["detrination", "attention to scientists", "secrets with the hope of finding a new home for humanity", "detrination", "attention to scientists", "secrets with the hope of finding a new home for humanity", ""])
+    const [corrections, setCorrections] = useState(["detrination", "attention to scientists", "secrets with the hope of finding a new home for us", "detrination", "attention to scientists", "secrets with the hope of finding a new home for us", ""])
 
     const [style, setStyle] = useState([styles.red, styles.yellow, styles.blue, styles.red, styles.yellow, styles.blue, ""])
     const [visible, setVisible] = useState(false);
@@ -30,12 +30,10 @@ const TextArea = () => {
 
     const handleHidden = (e, index) => {
         const className = e.target.className;
-        console.log('Mouse over:', e.target);
         setShown(className);
         setVisible(true);
         setHoveredIndex(index);
-        console.log('Shown (direct):', className);
-      };
+    };
 
     let finalText = '';
 
@@ -68,35 +66,47 @@ const TextArea = () => {
         }
     }, [finalText, styles.red, styles.yellow, styles.blue]);
 
+    const handleTextChange = (index, correctionText) => {
+        const newCorrections = [...corrections];
+        console.log(newCorrections);
+        newCorrections[index] = correctionText[index];
+        console.log(newCorrections);
+        setCorrections(newCorrections);
+        setVisible(false);
+        setShown("none");
+        setHoveredIndex(null);
+      };
+
     return (
         <>
-            <div className={styles.bar}>
-                <div className={styles.heading}><p>Answered by you</p></div>
-                <div className={styles.link}><pre>{wordCount} words     {letterCount} letters     {paragraphCount} paragraphs</pre></div>
-            </div>
-            <div ref={containerRef} className={styles.textarea}>
-                {text.map((txt, i) => (
-                    <React.Fragment key={i}>
-                        <p>{txt}</p>
-                        <p
-                            className={style[i]}
-                            onMouseOver={(e) => handleHidden(e, i)}
-                        >
-                            {corrections[i]}
-                        </p>
-                        {hoveredIndex === i && (
-                            <HoverWindow
-                                type={style}
-                                hover={shown}
-                                setHover={setShown}
-                                visible={visible}
-                                index={i}
-                            />
-                        )}
-                    </React.Fragment>
-                ))}
-            </div>
+          <div className={styles.bar}>
+            <div className={styles.heading}><p>Answered by you</p></div>
+            <div className={styles.link}><pre>{wordCount} words     {letterCount} letters     {paragraphCount} paragraphs</pre></div>
+          </div>
+          <div ref={containerRef} className={styles.textarea}>
+            {text.map((txt, i) => (
+              <React.Fragment key={i}>
+                <p>{txt}</p>
+                <p
+                  className={style[i]}
+                  onMouseOver={(e) => handleHidden(e, i)}
+                >
+                  {corrections[i]}
+                </p>
+                {hoveredIndex === i && (
+                  <HoverWindow
+                    type={style}
+                    hover={shown}
+                    setHover={setShown}
+                    visible={visible}
+                    index={i}
+                    handleTextChange={handleTextChange}
+                  />
+                )}
+              </React.Fragment>
+            ))}
+          </div>
         </>
-    );
-}
+      );
+    };
 export default TextArea
