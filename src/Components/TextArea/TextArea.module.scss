@@ -1,11 +1,11 @@
-.bar{
+.bar {
   margin: 20px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  .link{
+  .link {
     color: #5B6BE1;
     font-size: 14px;
     font-style: normal;
@@ -14,7 +14,7 @@
   }
 }
 
-.textarea{
+.textarea {
   height: max-content;
   border-radius: 12px;
   border: 0.5px solid rgba(197, 197, 197, 0.50);
@@ -28,7 +28,7 @@
   font-weight: 400;
   line-height: 40px;
 
-  .red{
+  .red {
     display: inline;
     color: #FF595E;
     font-size: 16px;
@@ -38,7 +38,7 @@
     text-decoration-line: underline;
   }
 
-  .yellow{
+  .yellow {
     display: inline;
     color: #FDB338;
     font-size: 16px;
@@ -48,7 +48,7 @@
     text-decoration-line: underline;
   }
 
-  .blue{
+  .blue {
     display: inline;
     color: #7B61FF;
     font-size: 16px;

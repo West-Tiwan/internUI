@@ -1,16 +1,18 @@
 .container{
     display: flex;
     flex-direction: column;
+    gap: 2px;
+    padding: 2px;
     width: max-content;
     transition: 1s ease;
     border-radius: 6px;
     background: var(--color-gray-10, #FFF);
     box-shadow: 8px 8px 40px 0px rgba(8, 15, 52, 0.06);
-    padding: 8px 10px;
     
     .shadow{
-        padding: 2px;
+        padding: 2px 20px 2px 2px;
         min-height: 20px;
+        width: 100%;
         border-radius: 6px;
         background: rgba(247, 245, 255, 0.80);
 
@@ -23,11 +25,19 @@
         }
 
         .correction{
-            color: var(--gradient-dark_purple, #5B6BE1);
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+
+            p{
+                color: #FF595E;
+                text-decoration-line: strikethrough;
+            }
+
+            .replace{
+                color: #5B6BE1;
+            }
         }
     }
 
@@ -38,8 +48,8 @@
         flex-direction: row;
         align-items: center;
         justify-self: flex-start;
-        gap: 10px;
-        padding-top: 5px;
+        padding-left: 2px;
+        gap: 5px;
 
         p{
             color: var(--color-gray-70, #7E7E7E);
