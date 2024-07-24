@@ -4,11 +4,13 @@ import Sidebar from "./Components/Sidebar/Sidebar.jsx";
 import UpArrow from "./assets/arrow-square-right.svg";
 import arrowSquareRight from "./assets/arrow-square-right.svg";
 import TextArea from "./Components/TextArea/TextArea.jsx";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const App = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   return (
       <>
+        <SpeedInsights />
         <div className={styles.toggler} onClick={() => setIsSidebarVisible(!isSidebarVisible)}>
           <img src={UpArrow}/>
         </div>
