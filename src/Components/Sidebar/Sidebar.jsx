@@ -1,6 +1,6 @@
 // Sidebar.jsx
 import React,{useState} from 'react';
-import styles from './Sidebar.module.scss'; // Assuming your styles are defined here
+import styles from './Sidebar.module.scss';
 import arrowSquareRight from "../../assets/arrow-square-right.svg";
 import CircleNumber from "../CircleNumber/CircleNumber.jsx";
 import NumberBox from "../NumberBox/NumberBox.jsx";
