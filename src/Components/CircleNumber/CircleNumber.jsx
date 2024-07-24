@@ -43,7 +43,7 @@ const CircleNumber = ({number, text}) => {
         case 1:
             return (
                 <div>
-                    <Example data={[{value:4.8},{value:5.2}]} COLORS={['#0088FE','#F2F6Fc']}/>
+                    <Example data={[{value:4.8},{value:5.2}]} COLORS={['#5B6AE0','#F2F6Fc']}/>
                 </div>
             )
         case 2:
