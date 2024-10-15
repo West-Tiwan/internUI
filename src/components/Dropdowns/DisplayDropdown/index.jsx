@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import './displayDropdown.css';
 import DisplayIcon from '../../../icons/Display.svg';
-import DownIcon from '../../../icons/Down.svg';
+import DownIcon from '../../../icons/down.svg';
 
 function DisplayDropdown({ grouping, setGrouping, ordering, setOrdering }) {
   const [visible, setVisible] = useState(false);
