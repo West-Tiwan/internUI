@@ -2,7 +2,7 @@ import NoPriorityIcon from '../icons/No-priority.svg';
 import LowPriorityIcon from '../icons/Img - Low Priority.svg';
 import MediumPriorityIcon from '../icons/Img - Medium Priority.svg';
 import HighPriorityIcon from '../icons/Img - High Priority.svg';
-import UrgentPriorityIcon from '../icons/SVG - Urgent priority grey.svg';
+import UrgentPriorityIcon from '../icons/SVG - Urgent Priority grey.svg';
 
 import BacklogIcon from '../icons/Backlog.svg';
 import TodoIcon from '../icons/To-do.svg';
